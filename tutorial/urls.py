@@ -9,7 +9,12 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     #url(r'^', include('snippets.urls')),
-    url(r'^', include(api_urls, namespace='api')),
+    #url(r'^api/', include(api_urls, namespace='api')),
+    #url(r'^', include(api_urls, namespace='api')),
+    url(r'^api/v1/', include(api_urls, namespace='api')),
     url(r'^api-auth/', include('rest_framework.urls',
                                namespace='rest_framework')),
 )
+
+
+
